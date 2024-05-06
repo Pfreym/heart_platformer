@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5v2rblotgmp6"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_t740g"]
+[ext_resource type="Texture2D" uid="uid://b6cvoa03mido4" path="res://cheese-wedge-svgrepo-com.svg" id="2_arhhw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gln6u"]
+size = Vector2(16, 11)
+
+[node name="Player" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_snap_length = 2.0
+script = ExtResource("1_t740g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_gln6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Cheese-wedge-svgrepo-com" type="Sprite2D" parent="."]
+position = Vector2(2.40741e-35, 3)
+scale = Vector2(0.0225, 0.0225)
+texture = ExtResource("2_arhhw")
